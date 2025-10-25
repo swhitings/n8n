@@ -55,6 +55,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.0",
+    "@langchain/community": "catalog:",
     "@n8n/eslint-config": "workspace:*",
     "@types/jest": "^29.5.3",
     "@types/node": "*",
@@ -69,6 +70,7 @@
     "jest-junit": "^16.0.0",
     "jest-mock": "^29.6.2",
     "jest-mock-extended": "^3.0.4",
+    "langchain": "0.3.33",
     "lefthook": "^1.7.15",
     "license-checker": "^25.0.1",
     "nock": "^14.0.1",
@@ -81,6 +83,7 @@
     "ts-jest": "^29.1.1",
     "tsc-alias": "^1.8.10",
     "tsc-watch": "^6.2.0",
+    "tsdown": "catalog:",
     "turbo": "2.5.4",
     "typescript": "*",
     "zx": "^8.1.4"
