@@ -4,15 +4,16 @@
   "description": "SQL + n8n expression language support for CodeMirror 6",
   "scripts": {
     "clean": "rimraf dist .turbo",
-    "test": "jest",
+    "test": "vitest --run",
     "generate:sql:grammar": "lezer-generator --typeScript --output src/grammar.sql.ts src/sql.grammar",
     "generate": "pnpm generate:sql:grammar && pnpm format",
-    "build": "tsc -p tsconfig.build.json",
+    "build": "pnpm clean && tsc -p tsconfig.build.json",
     "lint": "eslint . --quiet",
     "lint:fix": "eslint . --fix",
     "format": "biome format --write src test",
     "format:check": "biome ci src test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "postinstall": "pnpm build"
   },
   "keywords": [
     "editor",
@@ -47,6 +48,7 @@
   "devDependencies": {
     "@codemirror/text": "^0.19.6",
     "@lezer/generator": "^1.7.0",
-    "@n8n/typescript-config": "workspace:*"
+    "@n8n/typescript-config": "workspace:*",
+    "vitest": "^3.1.3"
   }
 }
